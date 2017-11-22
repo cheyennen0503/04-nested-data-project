@@ -64,3 +64,8 @@ national_crime_data = JSON.parse(%q|
 ]
 |)
 
+def collect_city()
+    city = ""
+    puts "What city would you like to choose?"
+    city
+end
