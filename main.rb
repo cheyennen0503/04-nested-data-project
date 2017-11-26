@@ -64,8 +64,14 @@ national_crime_data = JSON.parse(%q|
 ]
 |)
 
-def collect_city()
-    city = ""
+def collect_city_info(cities, crime_info)
     puts "What city would you like to choose?"
-    city
+    userinput = gets.chomp
+    cities["data"].each do |city|
+        if userinput == cities
+            return crime_info
+        end
+    end
 end
+collect_city_info("New York", national_crime_data)
+
