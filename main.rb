@@ -1,6 +1,6 @@
 require 'json'
 national_crime_data = JSON.parse(%q|
-[
+"data": [
 {
 "city": "New York",
 "crime_index_ranking": "1",
@@ -64,14 +64,19 @@ national_crime_data = JSON.parse(%q|
 ]
 |)
 
-def collect_city_info(cities, crime_info)
-    puts "What city would you like to choose?"
+def collect_city_info(city_info, ranks)
+    puts "Which number would you like to choose?(1-10):"
     userinput = gets.chomp
-    cities["data"].each do |city|
-        if userinput == cities
-            return crime_info
-        end
+    
+    ranks["data"].each do |rank|
+        if userinput == :crime_index_ranking
+         return :city
+         
+            
+        end    
+  
     end
 end
-collect_city_info("New York", national_crime_data)
+collect_city_info(national_crime_data, userinput)
+
 
