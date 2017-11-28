@@ -1,5 +1,6 @@
 require 'json'
 national_crime_data = JSON.parse(%q|
+# the data is in an array and the array is being stored in a variable "data"
 "data": [
 {
 "city": "New York",
@@ -64,12 +65,17 @@ national_crime_data = JSON.parse(%q|
 ]
 |)
 
+#created a method where the method will take the data taken from an open source and the user input 
+
 def collect_city_info(city_info, ranks)
     puts "Which number would you like to choose?(1-10):"
     userinput = gets.chomp
     
+    #for each rank in the dataset, the city that is associated with that number should be returned
     ranks["data"].each do |rank|
+      #checking to see if the userinput matches a crime index rating in the data 
         if userinput == :crime_index_ranking
+          #returns the city that associates with the number
          return :city
          
             
