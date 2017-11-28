@@ -1,0 +1,8 @@
+get the open data
+create it into a hash
+prompt the user to choose a number between 1 and 10 (which is the crime index ranking)
+and based on the number, the program returns the city associtated with ranking
+for each rank in the data,
+get the user input 
+use the user input to match it with a crime index ranking
+get the city key's name associated with user input
